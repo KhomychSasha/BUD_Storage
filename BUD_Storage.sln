@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUD_Storage", "BUD_Storage\BUD_Storage.csproj", "{61614D57-480C-4345-B148-E9B136A3C726}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61614D57-480C-4345-B148-E9B136A3C726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61614D57-480C-4345-B148-E9B136A3C726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61614D57-480C-4345-B148-E9B136A3C726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61614D57-480C-4345-B148-E9B136A3C726}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9AD5FE4-0BE3-4D44-A7D0-F7FA747BC251}
+	EndGlobalSection
+EndGlobal
