@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BUD_Storage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Background= "#FF354753"
+        Title="БУД_Склад" Height="500" Width="450" MinHeight="500" MinWidth="450" MaxHeight="500" MaxWidth="450">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="183*"/>
+            <RowDefinition Height="286*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Склади" FontSize="19" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="0,10,0,0"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Width="150" Height="35" FontSize="15" Content="Приходи" HorizontalAlignment="Center" Background="#B299B3D3"/>
+                <Button Grid.Column="1" Width="150" Height="35" FontSize="15" Content="Залишки" HorizontalAlignment="Center" Background="#B299B3D3"/>
+            </Grid>
+            <TextBlock Grid.Row="2" Text="Переміщення" FontSize="19" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="0,10,0,0"/>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Width="150" Height="35" FontSize="15" Content="Нове переміщення" HorizontalAlignment="Center" Background="#B299B3D3"/>
+                <Button Grid.Column="1" Width="150" Height="35" FontSize="15" Content="Список переміщень" HorizontalAlignment="Center" Background="#B299B3D3"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="30" Source="Images/Logo.png"/>
+            <TextBlock Grid.Row="1" Text="БУД_Склад" FontSize="47" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Papyrus" Foreground="#FF738EA0"/>
+        </Grid>
     </Grid>
 </Window>
