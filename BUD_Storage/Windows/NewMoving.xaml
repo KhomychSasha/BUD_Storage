@@ -5,8 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BUD_Storage.Windows"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="500">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Нове переміщення" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
     </Grid>
 </UserControl>

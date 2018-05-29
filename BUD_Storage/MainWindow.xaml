@@ -27,11 +27,11 @@
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" Text="Меню" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="0"/>
                 <TextBlock Grid.Row="1" Text="Склади:" FontSize="17" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="10,10,0,0"/>
-                <Button Grid.Row="2" FontSize="16" Content="Приходи" Margin="3" Background="#B299B3D3"/>
-                <Button Grid.Row="3" FontSize="16" Content="Залишки" Margin="3" Background="#B299B3D3"/>
+                <Button x:Name="BtnComeOn" Grid.Row="2" FontSize="16" Content="Приходи" Margin="3" Background="#B299B3D3" Click="BtnComeOn_Click"/>
+                <Button x:Name="BtnRemnants" Grid.Row="3" FontSize="16" Content="Залишки" Margin="3" Background="#B299B3D3" Click="BtnRemnants_Click"/>
                 <TextBlock Grid.Row="4" Text="Переміщення:" FontSize="17" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="10,10,0,0"/>
-                <Button Grid.Row="5" FontSize="16" Content="Нове переміщення" Margin="3" Background="#B299B3D3"/>
-                <Button Grid.Row="6" FontSize="16" Content="Список переміщень" Margin="3" Background="#B299B3D3"/>
+                <Button x:Name="BtnNewMoving" Grid.Row="5" FontSize="16" Content="Нове переміщення" Margin="3" Background="#B299B3D3" Click="BtnNewMoving_Click"/>
+                <Button x:Name="BtnListOfMoving" Grid.Row="6" FontSize="16" Content="Список переміщень" Margin="3" Background="#B299B3D3" Click="BtnListOfMoving_Click"/>
             </Grid>
         </Border>
         <Border Grid.Column="1" BorderBrush="#4C8AABD4" BorderThickness="3"/>
