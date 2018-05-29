@@ -1,5 +1,4 @@
-﻿using BUD_Storage.Windows;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BUD_Storage
+namespace BUD_Storage.Windows
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for WelcomeWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WelcomeWindow : UserControl
     {
-        public MainWindow()
+        public WelcomeWindow()
         {
             InitializeComponent();
-
-            WorkArea.Children.Add(new WelcomeWindow());
         }
     }
 }

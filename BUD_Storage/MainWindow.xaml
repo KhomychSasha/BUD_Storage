@@ -6,45 +6,35 @@
         xmlns:local="clr-namespace:BUD_Storage"
         mc:Ignorable="d"
         Background= "#FF354753"
-        Title="БУД_Склад" Height="500" Width="450" MinHeight="500" MinWidth="450" MaxHeight="500" MaxWidth="450">
+        Title="БУД_Склад" Height="500" Width="800" MinHeight="500" MinWidth="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="183*"/>
-            <RowDefinition Height="286*"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="Склади" FontSize="19" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="0,10,0,0"/>
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Width="150" Height="35" FontSize="15" Content="Приходи" HorizontalAlignment="Center" Background="#B299B3D3"/>
-                <Button Grid.Column="1" Width="150" Height="35" FontSize="15" Content="Залишки" HorizontalAlignment="Center" Background="#B299B3D3"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Padding="10" Margin="5,10,0,0" VerticalAlignment="Top">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Меню" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="0"/>
+                <TextBlock Grid.Row="1" Text="Склади:" FontSize="17" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="10,10,0,0"/>
+                <Button Grid.Row="2" FontSize="16" Content="Приходи" Margin="3" Background="#B299B3D3"/>
+                <Button Grid.Row="3" FontSize="16" Content="Залишки" Margin="3" Background="#B299B3D3"/>
+                <TextBlock Grid.Row="4" Text="Переміщення:" FontSize="17" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="10,10,0,0"/>
+                <Button Grid.Row="5" FontSize="16" Content="Нове переміщення" Margin="3" Background="#B299B3D3"/>
+                <Button Grid.Row="6" FontSize="16" Content="Список переміщень" Margin="3" Background="#B299B3D3"/>
             </Grid>
-            <TextBlock Grid.Row="2" Text="Переміщення" FontSize="19" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Papyrus" Foreground="#FF738EA0" Margin="0,10,0,0"/>
-            <Grid Grid.Row="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Width="150" Height="35" FontSize="15" Content="Нове переміщення" HorizontalAlignment="Center" Background="#B299B3D3"/>
-                <Button Grid.Column="1" Width="150" Height="35" FontSize="15" Content="Список переміщень" HorizontalAlignment="Center" Background="#B299B3D3"/>
-            </Grid>
-        </Grid>
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Image Grid.Row="0" Margin="30" Source="Images/Logo.png"/>
-            <TextBlock Grid.Row="1" Text="БУД_Склад" FontSize="47" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Papyrus" Foreground="#FF738EA0"/>
-        </Grid>
+        </Border>
+        <Border Grid.Column="1" BorderBrush="#4C8AABD4" BorderThickness="3"/>
+        <Grid x:Name="WorkArea" Grid.Column="2"/>
     </Grid>
 </Window>
