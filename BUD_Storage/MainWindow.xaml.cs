@@ -31,25 +31,25 @@ namespace BUD_Storage
         private void BtnComeOn_Click(object sender, RoutedEventArgs e)
         {
             WorkArea.Children.Clear();
-            WorkArea.Children.Add(new ComeOn());
+            WorkArea.Children.Add(new ComeOn(this));
         }
 
         private void BtnRemnants_Click(object sender, RoutedEventArgs e)
         {
             WorkArea.Children.Clear();
-            WorkArea.Children.Add(new Remnants());
+            WorkArea.Children.Add(new Remnants(this));
         }
 
         private void BtnNewMoving_Click(object sender, RoutedEventArgs e)
         {
             WorkArea.Children.Clear();
-            WorkArea.Children.Add(new NewMoving());
+            WorkArea.Children.Add(new NewMoving(this));
         }
 
         private void BtnListOfMoving_Click(object sender, RoutedEventArgs e)
         {
             WorkArea.Children.Clear();
-            WorkArea.Children.Add(new ListOfMoving());
+            WorkArea.Children.Add(new ListOfMoving(this));
         }
     }
 }

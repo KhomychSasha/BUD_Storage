@@ -5,12 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BUD_Storage.Windows"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="500">
+             d:DesignHeight="600" d:DesignWidth="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Залишки" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Залишки" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
+            <Button x:Name="BtnReturnToMailPage" Grid.Column="1" Width="37" Height="37" Background="#6699B3D3" RenderTransformOrigin="100,100" Click="BtnReturnToMailPage_Click">
+                <Image Source="/BUD_Storage;component/Images/IconHome.png"/>
+            </Button>
+        </Grid>
     </Grid>
 </UserControl>

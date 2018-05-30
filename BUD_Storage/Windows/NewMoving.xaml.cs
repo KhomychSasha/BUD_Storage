@@ -20,9 +20,19 @@ namespace BUD_Storage.Windows
     /// </summary>
     public partial class NewMoving : UserControl
     {
-        public NewMoving()
+        private MainWindow mainWin = null;
+
+        public NewMoving(MainWindow mw)
         {
             InitializeComponent();
+
+            mainWin = mw;
+        }
+
+        private void BtnReturnToMailPage_Click(object sender, RoutedEventArgs e)
+        {
+            mainWin.WorkArea.Children.Clear();
+            mainWin.WorkArea.Children.Add(new WelcomeWindow());
         }
     }
 }
