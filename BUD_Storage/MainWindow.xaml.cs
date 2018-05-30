@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUD_Storage.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,32 @@ namespace BUD_Storage
         public MainWindow()
         {
             InitializeComponent();
+
+            WorkArea.Children.Add(new WelcomeWindow());
+        }
+
+        private void BtnComeOn_Click(object sender, RoutedEventArgs e)
+        {
+            WorkArea.Children.Clear();
+            WorkArea.Children.Add(new ComeOn());
+        }
+
+        private void BtnRemnants_Click(object sender, RoutedEventArgs e)
+        {
+            WorkArea.Children.Clear();
+            WorkArea.Children.Add(new Remnants());
+        }
+
+        private void BtnNewMoving_Click(object sender, RoutedEventArgs e)
+        {
+            WorkArea.Children.Clear();
+            WorkArea.Children.Add(new NewMoving());
+        }
+
+        private void BtnListOfMoving_Click(object sender, RoutedEventArgs e)
+        {
+            WorkArea.Children.Clear();
+            WorkArea.Children.Add(new ListOfMoving());
         }
     }
 }
