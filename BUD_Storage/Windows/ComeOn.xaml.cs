@@ -33,5 +33,66 @@ namespace BUD_Storage.Windows
             mainWin.WorkArea.Children.Clear();
             mainWin.WorkArea.Children.Add(new WelcomeWindow());
         }
+
+        private void NumberInvoice_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!(Char.IsDigit(e.Text, 0)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void EDRPOU_PreviewTextInput_1(object sender, TextCompositionEventArgs e)
+        {
+            if (!(Char.IsDigit(e.Text, 0)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void NumberWarehouse_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!(Char.IsDigit(e.Text, 0)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void NumberProduct_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!(Char.IsDigit(e.Text, 0)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Amount_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!(Char.IsDigit(e.Text, 0)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Price_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!(Char.IsDigit(e.Text, 0) || (e.Text == ".")
+               && (!Price.Text.Contains(".")
+               && Price.Text.Length != 0)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            NumberInvoice.Text = String.Empty;
+            DateInvoice.Text = String.Empty;
+            EDRPOU.Text = String.Empty;
+            NumberWarehouse.Text = String.Empty;
+            NumberProduct.Text = String.Empty;
+            Amount.Text = String.Empty;
+            Price.Text = String.Empty;
+        }
     }
 }

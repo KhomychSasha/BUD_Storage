@@ -16,7 +16,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="Приходи" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
+            <TextBlock Grid.Column="0" Text="Приходи" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
             <Button x:Name="BtnReturnToMailPage" Grid.Column="1" Width="37" Height="37" Background="#6699B3D3" Click="BtnReturnToMailPage_Click">
                 <Image Source="/BUD_Storage;component/Images/IconHome.png"/>
             </Button>
@@ -37,64 +37,91 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Номер накладної" FontSize="27" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+                <TextBlock Grid.Column="0" Text="Номер накладної" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                <TextBox x:Name="NumberInvoice" Grid.Column="1" FontSize="22" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="NumberInvoice_PreviewTextInput"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Дата накладної" FontSize="27" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+                <TextBlock Grid.Column="0" Text="Дата накладної" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                <DatePicker x:Name="DateInvoice" Grid.Column="1" FontSize="22" Width="220" Height="35" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="ЄДРПОУ" FontSize="27" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+                <TextBlock Grid.Column="0" Text="ЄДРПОУ" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="EDRPOU" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="EDRPOU_PreviewTextInput_1"/>
+                    <Button Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left">
+                        <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
+                    </Button>
+                </Grid>
             </Grid>
             <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Склад" FontSize="27" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+                <TextBlock Grid.Column="0" Text="Номер складу" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="NumberWarehouse" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="NumberWarehouse_PreviewTextInput"/>
+                    <Button Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left">
+                        <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
+                    </Button>
+                </Grid>
             </Grid>
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Товар" FontSize="27" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+                <TextBlock Grid.Column="0" Text="Номер товару" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="NumberProduct" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="NumberProduct_PreviewTextInput"/>
+                    <Button Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left">
+                        <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
+                    </Button>
+                </Grid>
             </Grid>
             <Grid Grid.Row="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Кількість" FontSize="27" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+                <TextBlock Grid.Column="0" Text="Кількість" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                <TextBox x:Name="Amount" Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="10" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="Amount_PreviewTextInput"/>
             </Grid>
             <Grid Grid.Row="6">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Ціна без ПДВ" FontSize="27" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+                <TextBlock Grid.Column="0" Text="Ціна без ПДВ" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                <TextBox x:Name="Price" Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="15" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="Price_PreviewTextInput"/>
             </Grid>
             <Grid Grid.Row="7">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="Оформити накладну" FontSize="18" FontFamily="Gill Sans MT Condensed" Width="190" Height="37" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,35,0" Background="#9999B3D3"/>
-                <Button Grid.Column="1" Content="Відмінити" FontSize="18" FontFamily="Gill Sans MT Condensed" Width="190" Height="37" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0" Background="#9999B3D3"/>
+                <Button x:Name="CreateInvoice" Grid.Column="0" Content="Оформити накладну" FontSize="20" FontFamily="Gill Sans MT Condensed" Width="200" Height="37" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,35,0" Background="#9999B3D3"/>
+                <Button x:Name="Cancel" Grid.Column="1" Content="Відмінити" FontSize="20" FontFamily="Gill Sans MT Condensed" Width="200" Height="37" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0" Background="#9999B3D3" Click="Cancel_Click"/>
             </Grid>
         </Grid>
     </Grid>
