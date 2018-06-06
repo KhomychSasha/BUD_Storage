@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUD_Storage.App_Data;
+using BUD_Storage.Auxiliary_windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -66,7 +68,7 @@ namespace BUD_Storage.Windows
             }
         }
 
-        private void Amount_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        private void Quantity_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if (!(Char.IsDigit(e.Text, 0)))
             {
@@ -84,15 +86,71 @@ namespace BUD_Storage.Windows
             }
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
+        private void CleanFields()
         {
             NumberInvoice.Text = String.Empty;
             DateInvoice.Text = String.Empty;
             EDRPOU.Text = String.Empty;
             NumberWarehouse.Text = String.Empty;
             NumberProduct.Text = String.Empty;
-            Amount.Text = String.Empty;
+            Quantity.Text = String.Empty;
             Price.Text = String.Empty;
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            CleanFields();
+        }
+
+        private void CreateInvoice_Click(object sender, RoutedEventArgs e)
+        {
+            if (NumberInvoice.Text != String.Empty && DateInvoice.Text != String.Empty
+                && EDRPOU.Text != String.Empty && NumberWarehouse.Text != String.Empty
+                && NumberProduct.Text != String.Empty && Quantity.Text != String.Empty && Price.Text != String.Empty)
+            {
+
+
+                MessageForForms msg = new MessageForForms("Накладна!", "Накладну оформлено!");
+                msg.ShowDialog();
+
+                CleanFields();
+            }
+            else
+            {
+                MessageForForms msg = new MessageForForms("Помилка!", "Не всі поля заповнені!");
+
+                msg.ShowDialog();
+            }
+        }
+
+        private void InfoAboutEDRPOU_Click(object sender, RoutedEventArgs e)
+        {
+            WindInfoAboutEDRPOU windInfoEDRPOU = new WindInfoAboutEDRPOU();
+
+            if (windInfoEDRPOU.ShowDialog() == true)
+            {
+
+            }
+        }
+
+        private void InfoAboutNumberWarehouse_Click(object sender, RoutedEventArgs e)
+        {
+            WindInfoAboutNumberWarehouse windInfoNumberWarehouse = new WindInfoAboutNumberWarehouse();
+
+            if (windInfoNumberWarehouse.ShowDialog() == true)
+            {
+
+            }
+        }
+
+        private void InfoAboutNumberProduct_Click(object sender, RoutedEventArgs e)
+        {
+            WindInfoAboutNumberProduct windInfoNumberProduct = new WindInfoAboutNumberProduct();
+
+            if (windInfoNumberProduct.ShowDialog() == true)
+            {
+
+            }
         }
     }
 }

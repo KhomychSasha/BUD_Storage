@@ -60,7 +60,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBox x:Name="EDRPOU" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="EDRPOU_PreviewTextInput_1"/>
-                    <Button Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left">
+                    <Button x:Name="InfoAboutEDRPOU" Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left" Click="InfoAboutEDRPOU_Click">
                         <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
                     </Button>
                 </Grid>
@@ -77,7 +77,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBox x:Name="NumberWarehouse" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="NumberWarehouse_PreviewTextInput"/>
-                    <Button Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left">
+                    <Button x:Name="InfoAboutNumberWarehouse" Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left" Click="InfoAboutNumberWarehouse_Click">
                         <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
                     </Button>
                 </Grid>
@@ -94,7 +94,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBox x:Name="NumberProduct" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="NumberProduct_PreviewTextInput"/>
-                    <Button Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left">
+                    <Button x:Name="InfoAboutNumberProduct" Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left" Click="InfoAboutNumberProduct_Click">
                         <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
                     </Button>
                 </Grid>
@@ -105,7 +105,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="Кількість" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox x:Name="Amount" Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="10" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="Amount_PreviewTextInput"/>
+                <TextBox x:Name="Quantity" Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="10" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="Quantity_PreviewTextInput"/>
             </Grid>
             <Grid Grid.Row="6">
                 <Grid.ColumnDefinitions>
@@ -120,7 +120,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="CreateInvoice" Grid.Column="0" Content="Оформити накладну" FontSize="20" FontFamily="Gill Sans MT Condensed" Width="200" Height="37" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,35,0" Background="#9999B3D3"/>
+                <Button x:Name="CreateInvoice" Grid.Column="0" Content="Оформити накладну" FontSize="20" FontFamily="Gill Sans MT Condensed" Width="200" Height="37" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,35,0" Background="#9999B3D3" Click="CreateInvoice_Click"/>
                 <Button x:Name="Cancel" Grid.Column="1" Content="Відмінити" FontSize="20" FontFamily="Gill Sans MT Condensed" Width="200" Height="37" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0" Background="#9999B3D3" Click="Cancel_Click"/>
             </Grid>
         </Grid>

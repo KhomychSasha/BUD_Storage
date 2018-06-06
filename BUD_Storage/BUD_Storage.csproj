@@ -67,6 +67,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="App_Data\DatabaseBudStorage.cs" />
+    <Compile Include="Auxiliary_windows\MessageForForms.xaml.cs">
+      <DependentUpon>MessageForForms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliary_windows\WindInfoAboutEDRPOU.xaml.cs">
+      <DependentUpon>WindInfoAboutEDRPOU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliary_windows\WindInfoAboutNumberProduct.xaml.cs">
+      <DependentUpon>WindInfoAboutNumberProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliary_windows\WindInfoAboutNumberWarehouse.xaml.cs">
+      <DependentUpon>WindInfoAboutNumberWarehouse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelTables\Excel.cs" />
     <Compile Include="Windows\ComeOn.xaml.cs">
       <DependentUpon>ComeOn.xaml</DependentUpon>
     </Compile>
@@ -82,6 +95,22 @@
     <Compile Include="Windows\WelcomeWindow.xaml.cs">
       <DependentUpon>WelcomeWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Auxiliary_windows\MessageForForms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Auxiliary_windows\WindInfoAboutEDRPOU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Auxiliary_windows\WindInfoAboutNumberProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Auxiliary_windows\WindInfoAboutNumberWarehouse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,9 +177,7 @@
   <ItemGroup>
     <Resource Include="Images\Logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ExcelTables\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\Img_Welcome.png" />
   </ItemGroup>
@@ -159,6 +186,35 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\IconDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
