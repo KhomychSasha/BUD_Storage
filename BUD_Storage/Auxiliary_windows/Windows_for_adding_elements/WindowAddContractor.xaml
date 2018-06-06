@@ -1,0 +1,50 @@
+﻿<Window x:Class="BUD_Storage.Auxiliary_windows.Windows_for_adding_elements.WindowAddContractor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Background= "#FF354753"
+        Title="Добавлення контрагенту" Height="320" Width="640" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Коротка назва контрагента:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#FFC3C5C9"/>
+            <TextBox x:Name="ShortNameNewContractor" Grid.Column="1" Background="#FF99B3D3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="260" Height="35" FontSize="22" MaxLength="50"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Повна назва контрагента:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#FFC3C5C9"/>
+            <TextBox x:Name="FullNameNewContractor" Grid.Column="1" Background="#FF99B3D3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="260" Height="35" FontSize="22" MaxLength="100"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="ЄДРПОУ:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#FFC3C5C9"/>
+            <TextBox x:Name="EDRPOUNewContractor" Grid.Column="1" Background="#FF99B3D3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="260" Height="35" FontSize="22" MaxLength="20" PreviewTextInput="EDRPOUNewContractor_PreviewTextInput"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnAdd" Grid.Column="0" Width="200" Height="35" FontSize="15" Content="Добавити" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnAdd_Click"/>
+            <Button IsCancel="True" Grid.Column="1" Width="200" Height="35" FontSize="15" Content="Скасувати" HorizontalAlignment="Center" Background="#FF99B3D3"/>
+        </Grid>
+    </Grid>
+</Window>

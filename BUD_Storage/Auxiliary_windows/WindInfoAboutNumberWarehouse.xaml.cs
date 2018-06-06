@@ -26,14 +26,14 @@ namespace BUD_Storage.Auxiliary_windows
         {
             InitializeComponent();
 
-            using (DatabaseBudStorage db = new DatabaseBudStorage())
+            /*using (DatabaseBudStorage db = new DatabaseBudStorage())
             {
 
                 var unit = db.Entities_Unit_Of_Measurements.ToArray();
 
                 MessageBox.Show(unit[3].Name);
                 db.SaveChanges();
-            }
+            }*/
         }
     }
 }

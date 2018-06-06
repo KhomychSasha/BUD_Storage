@@ -59,7 +59,7 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="EDRPOU" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="EDRPOU_PreviewTextInput_1"/>
+                    <TextBlock x:Name="EDRPOU" Grid.Column="0" FontSize="22" Width="170" Height="35" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
                     <Button x:Name="InfoAboutEDRPOU" Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left" Click="InfoAboutEDRPOU_Click">
                         <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
                     </Button>
@@ -76,7 +76,7 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="NumberWarehouse" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="NumberWarehouse_PreviewTextInput"/>
+                    <TextBlock x:Name="NumberWarehouse" Grid.Column="0" FontSize="22" Width="170" Height="35" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
                     <Button x:Name="InfoAboutNumberWarehouse" Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left" Click="InfoAboutNumberWarehouse_Click">
                         <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
                     </Button>
@@ -93,7 +93,7 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="NumberProduct" Grid.Column="0" FontSize="22" Width="170" Height="35" MaxLength="13" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="NumberProduct_PreviewTextInput"/>
+                    <TextBlock x:Name="NumberProduct" Grid.Column="0" FontSize="22" Width="170" Height="35" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0"/>
                     <Button x:Name="InfoAboutNumberProduct" Grid.Column="1" Width="40" Height="35" Background="#B299B3D3" HorizontalAlignment="Left" Click="InfoAboutNumberProduct_Click">
                         <Image Margin="3" Source="/BUD_Storage;component/Images/IconDetails.png"/>
                     </Button>

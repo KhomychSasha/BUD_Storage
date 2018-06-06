@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Background= "#FF354753"
-        Title="Інформація про контрагентів" Height="600" Width="800" MinHeight="600" MinWidth="800" MaxHeight="600" MaxWidth="800">
+        Title="Інформація про контрагентів" Height="650" Width="900" MinHeight="650" MinWidth="900" MaxHeight="650" MaxWidth="900">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Конртагенти" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
+        <DataGrid x:Name="DataGridForContractors" Grid.Row="1" IsReadOnly="True" CanUserAddRows="False" ItemsSource="{Binding queryUser}" AutoGenerateColumns="False" Margin="20" SelectionChanged="DataGridForContractors_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IDContractor}" CanUserResize="False"/>
+                <DataGridTextColumn Header="Повна назва" Binding="{Binding FullName}" CanUserResize="False" Width="725"/>
+                <DataGridTextColumn Header="ЄДРПОУ" Binding="{Binding EDRPOU}" CanUserResize="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="ЄДРПОУ" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9"/>
+                <TextBlock x:Name="EDRPOU_Code" Grid.Row="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
+                <Button x:Name="BtnAddEDRPOU" Grid.Row="2" Width="120" Height="30" FontSize="15" Content="Обрати" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnAddEDRPOU_Click" IsEnabled="False"/>
+            </Grid>
+            <Button x:Name="BtnAddNewContractor" Grid.Column="1" Width="170" Height="30" FontSize="15" Content="Добавити контрагента" HorizontalAlignment="Right" Background="#FF99B3D3" VerticalAlignment="Top" Margin="0,0,20,0" Click="BtnAddNewContractor_Click"/>
+        </Grid>
     </Grid>
 </Window>

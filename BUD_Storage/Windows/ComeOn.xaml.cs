@@ -44,30 +44,6 @@ namespace BUD_Storage.Windows
             }
         }
 
-        private void EDRPOU_PreviewTextInput_1(object sender, TextCompositionEventArgs e)
-        {
-            if (!(Char.IsDigit(e.Text, 0)))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void NumberWarehouse_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            if (!(Char.IsDigit(e.Text, 0)))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void NumberProduct_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            if (!(Char.IsDigit(e.Text, 0)))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void Quantity_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if (!(Char.IsDigit(e.Text, 0)))
@@ -129,7 +105,7 @@ namespace BUD_Storage.Windows
 
             if (windInfoEDRPOU.ShowDialog() == true)
             {
-
+                EDRPOU.Text = windInfoEDRPOU.EDRPOU_Code.Text;
             }
         }
 
