@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BUD_Storage.Auxiliary_windows"
         mc:Ignorable="d"
         Background= "#FF354753"
-        Name="WindMessage" Height="150" Width="400" MinHeight="200" MinWidth="400" MaxHeight="200" MaxWidth="400" >
+        Name="WindMessage" Height="160" Width="500" ResizeMode="NoResize" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

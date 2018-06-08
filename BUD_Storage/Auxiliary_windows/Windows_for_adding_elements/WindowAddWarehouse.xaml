@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BUD_Storage.Auxiliary_windows.Windows_for_adding_elements"
         mc:Ignorable="d"
-        Title="WindowAddWarehouse" Height="450" Width="800">
+        Background= "#FF354753"
+        Title="Добавлення складу" Height="250" Width="560" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Назва складу:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#FFC3C5C9"/>
+            <TextBox x:Name="NameNewWarehouse" Grid.Column="1" Background="#FF99B3D3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="260" Height="35" FontSize="22" MaxLength="50" PreviewKeyDown="NameNewWarehouse_PreviewKeyDown"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Коментар:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#FFC3C5C9"/>
+            <TextBox x:Name="CommentNewWarehouse" Grid.Column="1" Background="#FF99B3D3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="260" Height="35" FontSize="22" MaxLength="50" PreviewKeyDown="CommentNewWarehouse_PreviewKeyDown"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnAdd" Grid.Column="0" Width="200" Height="35" FontSize="15" Content="Добавити" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnAdd_Click"/>
+            <Button IsCancel="True" Grid.Column="1" Width="200" Height="35" FontSize="15" Content="Скасувати" HorizontalAlignment="Center" Background="#FF99B3D3"/>
+        </Grid>
     </Grid>
 </Window>

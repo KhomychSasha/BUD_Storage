@@ -70,8 +70,8 @@
     <Compile Include="Auxiliary_windows\MessageForForms.xaml.cs">
       <DependentUpon>MessageForForms.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Auxiliary_windows\WindInfoAboutEDRPOU.xaml.cs">
-      <DependentUpon>WindInfoAboutEDRPOU.xaml</DependentUpon>
+    <Compile Include="Auxiliary_windows\WindInfoAboutNumberContractor.xaml.cs">
+      <DependentUpon>WindInfoAboutNumberContractor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Auxiliary_windows\WindInfoAboutNumberProduct.xaml.cs">
       <DependentUpon>WindInfoAboutNumberProduct.xaml</DependentUpon>
@@ -108,7 +108,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Auxiliary_windows\WindInfoAboutEDRPOU.xaml">
+    <Page Include="Auxiliary_windows\WindInfoAboutNumberContractor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

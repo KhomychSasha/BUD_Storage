@@ -1,8 +1,9 @@
-﻿<Window x:Class="BUD_Storage.Auxiliary_windows.WindInfoAboutEDRPOU"
+﻿<Window x:Class="BUD_Storage.Auxiliary_windows.WindInfoAboutNumberContractor"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BUD_Storage.Auxiliary_windows"
         mc:Ignorable="d"
         Background= "#FF354753"
         Title="Інформація про контрагентів" Height="650" Width="900" MinHeight="650" MinWidth="900" MaxHeight="650" MaxWidth="900">
@@ -13,11 +14,11 @@
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="Конртагенти" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
-        <DataGrid x:Name="DataGridForContractors" Grid.Row="1" IsReadOnly="True" CanUserAddRows="False" ItemsSource="{Binding queryUser}" AutoGenerateColumns="False" Margin="20" SelectionChanged="DataGridForContractors_SelectionChanged">
+        <DataGrid x:Name="DataGridForContractors" Grid.Row="1" IsReadOnly="True" CanUserAddRows="False" AutoGenerateColumns="False" Margin="20" SelectionChanged="DataGridForContractors_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IDContractor}" CanUserResize="False"/>
-                <DataGridTextColumn Header="Повна назва" Binding="{Binding FullName}" CanUserResize="False" Width="725"/>
-                <DataGridTextColumn Header="ЄДРПОУ" Binding="{Binding EDRPOU}" CanUserResize="False"/>
+                <DataGridTextColumn Header="Повна назва" Binding="{Binding FullName}" CanUserResize="False" Width="710"/>
+                <DataGridTextColumn Header="ЄДРПОУ" Binding="{Binding EDRPOU}" CanUserResize="False" Width="85"/>
             </DataGrid.Columns>
         </DataGrid>
         <Grid Grid.Row="2">
@@ -32,11 +33,12 @@
                     <RowDefinition/>
                     <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Text="ЄДРПОУ" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9"/>
-                <TextBlock x:Name="EDRPOU_Code" Grid.Row="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
-                <Button x:Name="BtnAddEDRPOU" Grid.Row="2" Width="120" Height="30" FontSize="15" Content="Обрати" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnAddEDRPOU_Click" IsEnabled="False"/>
+                <TextBlock Grid.Row="0" Text="Номер контрагента" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9"/>
+                <TextBlock x:Name="Contractor_Code" Grid.Row="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
+                <Button x:Name="BtnAddContractor" Grid.Row="2" Width="120" Height="30" FontSize="15" Content="Обрати" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnAddContractor_Click" IsEnabled="False"/>
             </Grid>
             <Button x:Name="BtnAddNewContractor" Grid.Column="1" Width="170" Height="30" FontSize="15" Content="Добавити контрагента" HorizontalAlignment="Right" Background="#FF99B3D3" VerticalAlignment="Top" Margin="0,0,20,0" Click="BtnAddNewContractor_Click"/>
         </Grid>
     </Grid>
 </Window>
+

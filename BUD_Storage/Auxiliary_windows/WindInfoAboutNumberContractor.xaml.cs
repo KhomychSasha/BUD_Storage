@@ -18,28 +18,29 @@ using System.Windows.Shapes;
 namespace BUD_Storage.Auxiliary_windows
 {
     /// <summary>
-    /// Interaction logic for WindInfoAboutEDRPOU.xaml
+    /// Interaction logic for WindInfoAboutNumberContractor.xaml
     /// </summary>
-    public partial class WindInfoAboutEDRPOU : Window
+    public partial class WindInfoAboutNumberContractor : Window
     {
         private DatabaseBudStorage db = new DatabaseBudStorage();
-        public WindInfoAboutEDRPOU()
+
+        public WindInfoAboutNumberContractor()
         {
             InitializeComponent();
 
             SetDataGrid();
         }
 
+
         private void SetDataGrid()
         {
-
             var queryContracrots = from ct in db.Entities_Contractors
                                    select new
-                                    {
-                                        IDContractor = ct.Id,
-                                        FullName = ct.Full_Name,
-                                        EDRPOU = ct.EDRPOU,
-                                    };
+                                   {
+                                       IDContractor = ct.Id,
+                                       FullName = ct.Full_Name,
+                                       EDRPOU = ct.EDRPOU,
+                                   };
 
             DataGridForContractors.ItemsSource = queryContracrots.ToList();
         }
@@ -55,11 +56,11 @@ namespace BUD_Storage.Auxiliary_windows
                 {
                     DataGridCellsPresenter presenter = GetVisualChild<DataGridCellsPresenter>(row);
 
-                    DataGridCell cell = presenter.ItemContainerGenerator.ContainerFromIndex(2) as DataGridCell;
+                    DataGridCell cell = presenter.ItemContainerGenerator.ContainerFromIndex(0) as DataGridCell;
                     if (cell != null)
                     {
-                        EDRPOU_Code.Text = ((TextBlock)cell.Content).Text;
-                        BtnAddEDRPOU.IsEnabled = true;
+                        Contractor_Code.Text = ((TextBlock)cell.Content).Text;
+                        BtnAddContractor.IsEnabled = true;
                     }
                 }
             }
@@ -79,7 +80,7 @@ namespace BUD_Storage.Auxiliary_windows
             return child;
         }
 
-        private void BtnAddEDRPOU_Click(object sender, RoutedEventArgs e)
+        private void BtnAddContractor_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
         }

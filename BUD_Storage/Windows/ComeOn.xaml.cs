@@ -66,7 +66,7 @@ namespace BUD_Storage.Windows
         {
             NumberInvoice.Text = String.Empty;
             DateInvoice.Text = String.Empty;
-            EDRPOU.Text = String.Empty;
+            NumberContractor.Text = String.Empty;
             NumberWarehouse.Text = String.Empty;
             NumberProduct.Text = String.Empty;
             Quantity.Text = String.Empty;
@@ -81,10 +81,38 @@ namespace BUD_Storage.Windows
         private void CreateInvoice_Click(object sender, RoutedEventArgs e)
         {
             if (NumberInvoice.Text != String.Empty && DateInvoice.Text != String.Empty
-                && EDRPOU.Text != String.Empty && NumberWarehouse.Text != String.Empty
+                && NumberContractor.Text != String.Empty && NumberWarehouse.Text != String.Empty
                 && NumberProduct.Text != String.Empty && Quantity.Text != String.Empty && Price.Text != String.Empty)
             {
+                Product_In_The_Warehouse newPrdInWarehouse = new Product_In_The_Warehouse()
+                {
+                    IdProduct = Int32.Parse(NumberProduct.Text),
+                    IdWarehouse = Int32.Parse(NumberWarehouse.Text),
+                    IdContractor = Int32.Parse(NumberContractor.Text),
+                    Quantity = Int32.Parse(Quantity.Text),
+                    Price = Decimal.Parse(Price.Text),
+                    VAT = 0,
+                    Price_VAT = Decimal.Parse(Price.Text)
+                };
 
+                if (CheckBoxVAT.IsChecked == true)
+                {
+                    newPrdInWarehouse.VAT = 20;
+
+                    decimal vat = 0.2m;
+                    newPrdInWarehouse.Price_VAT += Decimal.Parse(Price.Text) * vat;
+                }
+
+                using (DatabaseBudStorage db = new DatabaseBudStorage())
+                {
+                    db.Entities_Product_In_The_Warehouses.Add(newPrdInWarehouse);
+
+                    if (NumberWarehouse.Text != "1")
+                    {
+
+                    }
+                    db.SaveChanges();
+                }
 
                 MessageForForms msg = new MessageForForms("Накладна!", "Накладну оформлено!");
                 msg.ShowDialog();
@@ -94,18 +122,17 @@ namespace BUD_Storage.Windows
             else
             {
                 MessageForForms msg = new MessageForForms("Помилка!", "Не всі поля заповнені!");
-
                 msg.ShowDialog();
             }
         }
 
-        private void InfoAboutEDRPOU_Click(object sender, RoutedEventArgs e)
+        private void InfoAboutContractor_Click(object sender, RoutedEventArgs e)
         {
-            WindInfoAboutEDRPOU windInfoEDRPOU = new WindInfoAboutEDRPOU();
+            WindInfoAboutNumberContractor windInfoNumberContractor = new WindInfoAboutNumberContractor();
 
-            if (windInfoEDRPOU.ShowDialog() == true)
+            if (windInfoNumberContractor.ShowDialog() == true)
             {
-                EDRPOU.Text = windInfoEDRPOU.EDRPOU_Code.Text;
+                NumberContractor.Text = windInfoNumberContractor.Contractor_Code.Text;
             }
         }
 
@@ -115,7 +142,7 @@ namespace BUD_Storage.Windows
 
             if (windInfoNumberWarehouse.ShowDialog() == true)
             {
-
+                NumberWarehouse.Text = windInfoNumberWarehouse.Warehouse_Code.Text;
             }
         }
 
@@ -125,7 +152,46 @@ namespace BUD_Storage.Windows
 
             if (windInfoNumberProduct.ShowDialog() == true)
             {
+                NumberProduct.Text = windInfoNumberProduct.Product_Code.Text;
+            }
+        }
 
+        private void TemplateForKeyDown(string text, KeyEventArgs e)
+        {
+            if (text.Length != 0)
+            {
+                string st = text.Substring(text.Length - 1);
+
+                if (st == " " && e.Key == Key.Space)
+                {
+                    e.Handled = true;
+                }
+            }
+
+            if (e.Key == Key.Space && text.Length == 0)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void NumberInvoice_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            TemplateForKeyDown(NumberInvoice.Text, e);
+        }
+
+        private void Quantity_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Price_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
             }
         }
     }
