@@ -16,7 +16,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="Приходи" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
+            <TextBlock Grid.Column="0" Text="Оформлення приходу" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
             <Button x:Name="BtnReturnToMailPage" Grid.Column="1" Width="37" Height="37" Background="#6699B3D3" Click="BtnReturnToMailPage_Click">
                 <Image Source="/BUD_Storage;component/Images/IconHome.png"/>
             </Button>
@@ -108,7 +108,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="Кількість" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
-                <TextBox x:Name="Quantity" Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="10" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="Quantity_PreviewTextInput" PreviewKeyDown="Quantity_PreviewKeyDown"/>
+                <TextBox x:Name="Quantity" Grid.Column="1" FontSize="26" Width="220" Height="35" MaxLength="7" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewTextInput="Quantity_PreviewTextInput" PreviewKeyDown="Quantity_PreviewKeyDown"/>
             </Grid>
             <Grid Grid.Row="6">
                 <Grid.ColumnDefinitions>
@@ -135,7 +135,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="CreateInvoice" Grid.Column="0" Content="Оформити накладну" FontSize="20" FontFamily="Gill Sans MT Condensed" Width="200" Height="37" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,35,0" Background="#9999B3D3" Click="CreateInvoice_Click"/>
+                <Button x:Name="CreateInvoice" Grid.Column="0" Content="Оформити" FontSize="20" FontFamily="Gill Sans MT Condensed" Width="200" Height="37" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,35,0" Background="#9999B3D3" Click="CreateInvoice_Click"/>
                 <Button x:Name="Cancel" Grid.Column="1" Content="Відмінити" FontSize="20" FontFamily="Gill Sans MT Condensed" Width="200" Height="37" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0" Background="#9999B3D3" Click="Cancel_Click"/>
             </Grid>
         </Grid>

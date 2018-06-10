@@ -185,7 +185,8 @@ namespace BUD_Storage.App_Data
     public class Invoice
     {
         public int Id { get; set; }
-        public int NumberInvoice { get; set; }
+        [Required]
+        public string NumberInvoice { get; set; }
         public DateTime DateInvoice { get; set; }
 
         public int IdProduct_In_The_Warehouse { get; set; }

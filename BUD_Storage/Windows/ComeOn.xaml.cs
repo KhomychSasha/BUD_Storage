@@ -22,6 +22,7 @@ namespace BUD_Storage.Windows
     /// </summary>
     public partial class ComeOn : UserControl
     {
+        private const int idMainWarehouse = 1;
         private MainWindow mainWin = null;  
 
         public ComeOn(MainWindow mw)
@@ -54,8 +55,8 @@ namespace BUD_Storage.Windows
 
         private void Price_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (!(Char.IsDigit(e.Text, 0) || (e.Text == ".")
-               && (!Price.Text.Contains(".")
+            if (!(Char.IsDigit(e.Text, 0) || (e.Text == ",")
+               && (!Price.Text.Contains(",")
                && Price.Text.Length != 0)))
             {
                 e.Handled = true;
@@ -106,9 +107,35 @@ namespace BUD_Storage.Windows
                 using (DatabaseBudStorage db = new DatabaseBudStorage())
                 {
                     db.Entities_Product_In_The_Warehouses.Add(newPrdInWarehouse);
+                    db.SaveChanges();
 
-                    if (NumberWarehouse.Text != "1")
+                    Invoice newInvoice = new Invoice()
                     {
+                        NumberInvoice = NumberInvoice.Text,
+                        DateInvoice = DateTime.Parse(DateInvoice.Text),
+                        IdProduct_In_The_Warehouse = db.Entities_Product_In_The_Warehouses.ToList().Last().Id
+                    };
+
+                    db.Entities_Invoices.Add(newInvoice);
+
+                    if (NumberWarehouse.Text != idMainWarehouse.ToString())
+                    {
+                        int codeNewMoving = 0;
+                        if (db.Entities_Movings.Count() > 0)
+                        {
+                            codeNewMoving = db.Entities_Movings.ToList().Last().Code + 1;
+                        }
+
+                        Moving newMoving = new Moving()
+                        {
+                            Code = codeNewMoving,
+                            DateMoving = DateTime.Now,
+                            First_Warehouse = idMainWarehouse,
+                            Second_Warehouse = Int32.Parse(NumberWarehouse.Text),
+                            IdProduct_In_The_Warehouse = db.Entities_Product_In_The_Warehouses.ToList().Last().Id
+                        };
+
+                        db.Entities_Movings.Add(newMoving);
 
                     }
                     db.SaveChanges();
@@ -181,7 +208,7 @@ namespace BUD_Storage.Windows
 
         private void Quantity_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Space)
+            if (e.Key == Key.Space || Quantity.Text.Length == 0 && e.Key == Key.D0)
             {
                 e.Handled = true;
             }
