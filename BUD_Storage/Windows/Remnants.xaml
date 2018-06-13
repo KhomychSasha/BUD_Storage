@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BUD_Storage.Windows"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="500">
-    <Grid>
+             d:DesignHeight="650" d:DesignWidth="650">
+    <Grid MaxWidth="750" MaxHeight="750">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition/>
@@ -16,10 +16,37 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="Залишки" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
+            <TextBlock Grid.Column="0" Text="Залишки по складах" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
             <Button x:Name="BtnReturnToMailPage" Grid.Column="1" Width="37" Height="37" Background="#6699B3D3" RenderTransformOrigin="100,100" Click="BtnReturnToMailPage_Click">
                 <Image Source="/BUD_Storage;component/Images/IconHome.png"/>
             </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Список складів:" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9" Margin="20,0,0,0"/>
+            <ScrollViewer Grid.Row="1" Margin="20,0" VerticalScrollBarVisibility="Visible">
+                <StackPanel x:Name="StackPanelForWarehouse"  Background="#B294A4AC"/>
+            </ScrollViewer>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Склад:" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
+                    <TextBlock x:Name="NameWarehouse" Grid.Column="1"  FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
+                    <Button x:Name="ChooseWarehouse" Grid.Column="2" Width="90" Height="30" FontSize="15" Content="Обрати" HorizontalAlignment="Center" Background="#FF99B3D3" IsEnabled="False" Click="ChooseWarehouse_Click"/>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

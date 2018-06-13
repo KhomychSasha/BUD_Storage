@@ -22,8 +22,6 @@ namespace BUD_Storage.Auxiliary_windows
     /// </summary>
     public partial class WindInfoAboutNumberContractor : Window
     {
-        private DatabaseBudStorage db = new DatabaseBudStorage();
-
         public WindInfoAboutNumberContractor()
         {
             InitializeComponent();
@@ -31,18 +29,20 @@ namespace BUD_Storage.Auxiliary_windows
             SetDataGrid();
         }
 
-
         private void SetDataGrid()
         {
-            var queryContracrots = from ct in db.Entities_Contractors
-                                   select new
-                                   {
-                                       IDContractor = ct.Id,
-                                       FullName = ct.Full_Name,
-                                       EDRPOU = ct.EDRPOU,
-                                   };
+            using (DatabaseBudStorage db = new DatabaseBudStorage())
+            {
+                var queryContracrots = from ct in db.Entities_Contractors
+                                       select new
+                                       {
+                                           IDContractor = ct.Id,
+                                           FullName = ct.Full_Name,
+                                           EDRPOU = ct.EDRPOU,
+                                       };
 
-            DataGridForContractors.ItemsSource = queryContracrots.ToList();
+                DataGridForContractors.ItemsSource = queryContracrots.ToList();
+            }
         }
 
         private void DataGridForContractors_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -97,9 +97,11 @@ namespace BUD_Storage.Auxiliary_windows
                     EDRPOU = win_add_ct.new_contractor.EDRPOU
                 };
 
-                db.Entities_Contractors.Add(new_ctr);
-                db.SaveChanges();
-
+                using (DatabaseBudStorage db = new DatabaseBudStorage())
+                {
+                    db.Entities_Contractors.Add(new_ctr);
+                    db.SaveChanges();
+                }
                 SetDataGrid();
             }
         }

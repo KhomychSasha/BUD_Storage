@@ -132,6 +132,7 @@ namespace BUD_Storage.Windows
                             DateMoving = DateTime.Now,
                             First_Warehouse = idMainWarehouse,
                             Second_Warehouse = Int32.Parse(NumberWarehouse.Text),
+                            Quantity = Int32.Parse(Quantity.Text),
                             IdProduct_In_The_Warehouse = db.Entities_Product_In_The_Warehouses.ToList().Last().Id
                         };
 

@@ -200,6 +200,7 @@ namespace BUD_Storage.App_Data
         public DateTime DateMoving { get; set; }
         public int First_Warehouse { get; set; }
         public int Second_Warehouse { get; set; }
+        public int Quantity { get; set; }
 
 
         public int IdProduct_In_The_Warehouse { get; set; }
