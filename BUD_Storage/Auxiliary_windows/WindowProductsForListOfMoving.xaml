@@ -1,0 +1,49 @@
+﻿<Window x:Class="BUD_Storage.Auxiliary_windows.WindowProductsForListOfMoving"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BUD_Storage.Auxiliary_windows"
+        mc:Ignorable="d"
+        Background= "#FF354753"
+        Title="Інформація про переміщення" Height="590" Width="900" MinHeight="590" MinWidth="900" MaxHeight="590" MaxWidth="900">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="NumberMoving" Grid.Row="0"  Text="Переміщення №" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
+                <TextBlock x:Name="DataMoving" Grid.Row="1" Text="Дата переміщення: " FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"  Text="З:" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                    <TextBlock x:Name="FirstWarehouse" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
+                    <TextBlock Grid.Column="2"  Text="На:" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FFC3C5C9" Margin="0,0,20,0"/>
+                    <TextBlock x:Name="SecondWarehouse" Grid.Column="3" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
+                </Grid>
+            </Grid>
+            <DataGrid x:Name="DataGridForProducts" Grid.Row="1" IsReadOnly="True" CanUserAddRows="False" AutoGenerateColumns="False" Margin="20">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding IDProduct}" CanUserResize="False"/>
+                    <DataGridTextColumn Header="Назва товару" Binding="{Binding NameProduct}" CanUserResize="False" Width="500"/>
+                    <DataGridTextColumn Header="Кількість" Binding="{Binding Quantity}" CanUserResize="False" Width="155"/>
+                    <DataGridTextColumn Header="Ціна за одиницю" Binding="{Binding Price}" CanUserResize="False" Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="BtnPrintAct" Grid.Row="2" Width="170" Height="30" FontSize="16" Content="Друкувати" HorizontalAlignment="Right" Background="#FF99B3D3" VerticalAlignment="Top" Margin="0,0,20,0" Click="BtnPrintAct_Click"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -85,6 +85,9 @@
     <Compile Include="Auxiliary_windows\WindInfoAboutRemnant.xaml.cs">
       <DependentUpon>WindInfoAboutRemnant.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Auxiliary_windows\WindowProductsForListOfMoving.xaml.cs">
+      <DependentUpon>WindowProductsForListOfMoving.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Auxiliary_windows\Windows_for_adding_elements\WindowAddContractor.xaml.cs">
       <DependentUpon>WindowAddContractor.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Auxiliary_windows\WindInfoAboutRemnant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Auxiliary_windows\WindowProductsForListOfMoving.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

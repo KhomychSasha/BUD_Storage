@@ -1,4 +1,5 @@
 ﻿using BUD_Storage.App_Data;
+using BUD_Storage.Auxiliary_windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,32 +38,32 @@ namespace BUD_Storage.Windows
 
         private void SetDataGrid()
         {
-            var queryMoving = from mv in db.Entities_Movings
+            var queryMoving = (from mv in db.Entities_Movings
                               join fwr in db.Entities_Warehouses on mv.First_Warehouse equals fwr.Id
                               join swr in db.Entities_Warehouses on mv.Second_Warehouse equals swr.Id
                               select new
                                   {
                                       IDMoving = mv.Id,
+                                      CodeMoving = mv.Code,
                                       FirstWarehouse = fwr.Name,
                                       SecondWarehouse = swr.Name,
                                       DateMoving = mv.DateMoving
-                                  };
+                                  }).ToArray();
 
-            List<Moving> unicMovings = new List<Moving>();
-
-            foreach (var mv in queryMoving.ToList())
+            for (int i = 0; i < queryMoving.Count(); ++i)
             {
-                if (unicMovings.Count != 0)
+                if (i != 0)
                 {
-
+                    if (queryMoving[i].CodeMoving != queryMoving[i - 1].CodeMoving)
+                    {
+                        DataGridForMovings.Items.Add(queryMoving[i]);
+                    }
                 }
                 else
                 {
-
+                    DataGridForMovings.Items.Add(queryMoving[i]);
                 }
             }
-
-            DataGridForMovings.ItemsSource = queryMoving.ToList();
         }
 
         private void DataGridForMovings_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -108,7 +109,10 @@ namespace BUD_Storage.Windows
 
         private void BtnChooseMoving_Click(object sender, RoutedEventArgs e)
         {
+            int idMoving = Int32.Parse(NumberMoving.Text);
 
+            WindowProductsForListOfMoving wind_prd_for_list_of_mv = new WindowProductsForListOfMoving(idMoving);
+            wind_prd_for_list_of_mv.ShowDialog();
         }
     }
 }

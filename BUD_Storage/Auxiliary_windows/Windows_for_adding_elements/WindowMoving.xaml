@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BUD_Storage.Auxiliary_windows.Windows_for_adding_elements"
         mc:Ignorable="d"
         Background= "#FF354753"
-        Title="Переміщення" Height="250" Width="520" ResizeMode="NoResize">
+        Title="Переміщення" Height="250" Width="490" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -21,7 +21,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="Перемістити все:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FFC3C5C9"/>
+            <TextBlock Grid.Column="0" Text="Перемістити все:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Foreground="#FFC3C5C9"/>
             <CheckBox x:Name="CheckBoxAll" Grid.Column="1" IsChecked="True" Height="15" Background="#FFC3C5C9" HorizontalAlignment="Center" Click="CheckBoxAll_Click" >
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.6" ScaleY="1.6" />
@@ -33,10 +33,10 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="Кількість:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FFC3C5C9"/>
+            <TextBlock Grid.Column="0" Text="Кількість:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Foreground="#FFC3C5C9"/>
             <ComboBox x:Name="QuantityProduct" Grid.Column="1" IsEnabled="False" Background="#FF99B3D3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="35" FontSize="22"/>
         </Grid>
-        <Button x:Name="BtnMove" Grid.Row="4" Width="200" Height="35" FontSize="17" Content="Відправити" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnMove_Click"/>
+        <Button x:Name="BtnMove" Grid.Row="4" Width="250" Height="35" FontSize="17" Content="Відправити" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnMove_Click"/>
     </Grid>
 </Window>
 

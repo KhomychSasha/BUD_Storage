@@ -35,8 +35,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="BtnAdd" Grid.Column="0" Width="200" Height="35" FontSize="15" Content="Добавити" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnAdd_Click"/>
-            <Button IsCancel="True" Grid.Column="1" Width="200" Height="35" FontSize="15" Content="Скасувати" HorizontalAlignment="Center" Background="#FF99B3D3"/>
+            <Button x:Name="BtnAdd" Grid.Column="0" Width="200" Height="35" FontSize="17" Content="Добавити" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnAdd_Click"/>
+            <Button IsCancel="True" Grid.Column="1" Width="200" Height="35" FontSize="17" Content="Скасувати" HorizontalAlignment="Center" Background="#FF99B3D3"/>
         </Grid>
     </Grid>
 </Window>
