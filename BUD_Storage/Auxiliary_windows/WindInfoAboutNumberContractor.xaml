@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:BUD_Storage.Auxiliary_windows"
         mc:Ignorable="d"
         Background= "#FF354753"
-        Title="Інформація про контрагентів" Height="650" Width="900" MinHeight="650" MinWidth="900" MaxHeight="650" MaxWidth="900">
+        Title="Інформація про контрагентів" Height="630" Width="900" MinHeight="630" MinWidth="900" MaxHeight="630" MaxWidth="900">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
+            <RowDefinition Height="400"/>
             <RowDefinition/>
-            <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="Конртагенти" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
         <DataGrid x:Name="DataGridForContractors" Grid.Row="1" IsReadOnly="True" CanUserAddRows="False" AutoGenerateColumns="False" Margin="20" SelectionChanged="DataGridForContractors_SelectionChanged">
@@ -28,10 +28,10 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
                     <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" Text="Номер контрагента" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9"/>
                 <TextBlock x:Name="Contractor_Code" Grid.Row="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>

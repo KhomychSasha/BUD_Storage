@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BUD_Storage.App" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAABAAAAAAAAgAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.App_Data.CustomContextInitializer" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.App_Data.DatabaseBudStorage" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAAAAAAAAAAAAAgAAAAAAAAEAAAAAEEAAAAAAAABA=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.App_Data.Unit_Of_Measurement" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.App_Data.Product" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAgAAQAAAAAgAAAAAAAAAAABAA=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.App_Data.Warehouse" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.App_Data.Contractor" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAEAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.App_Data.Product_In_The_Warehouse" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAQBAAAAAABAAAAQAAIAAAAAAAAQIgCAQAAQ=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.App_Data.Invoice" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAABASAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.App_Data.Moving" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAIAAAAAAAACAAAgAAAAAAAAAAAAAAEAgAAQAAA=</HashCode>
+      <FileName>App_Data\DatabaseBudStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.MessageForForms" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\MessageForForms.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.WindAddCreateNewMoving" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAQAAAAAAAAAAAAAgAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\WindAddCreateNewMoving.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.WindInfoAboutNumberContractor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\WindInfoAboutNumberContractor.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.WindInfoAboutNumberProduct" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAQAAAACAAQAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\WindInfoAboutNumberProduct.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.WindInfoAboutNumberWarehouse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAABAAAQAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\WindInfoAboutNumberWarehouse.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.WindInfoAboutRemnant" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\WindInfoAboutRemnant.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.WindowProductsForListOfMoving" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAQAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\WindowProductsForListOfMoving.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.Windows_for_adding_elements.WindowAddContractor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAEAAAAAAAABAAAAAAAgAAAA4AAAAI=</HashCode>
+      <FileName>Auxiliary_windows\Windows_for_adding_elements\WindowAddContractor.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.Windows_for_adding_elements.WindowAddProduct" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAACAAAAAAAAAAAwAEAAgAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\Windows_for_adding_elements\WindowAddProduct.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.Windows_for_adding_elements.WindowAddWarehouse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAACAAAAAAAAAAAAAgAACAgAAAAA=</HashCode>
+      <FileName>Auxiliary_windows\Windows_for_adding_elements\WindowAddWarehouse.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Auxiliary_windows.Windows_for_adding_elements.WindowMoving" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAQAAAAAAAAAQEAAQAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Auxiliary_windows\Windows_for_adding_elements\WindowMoving.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.ExcelTables.Excel" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAACAAAAAABAAAAAAQAAAAAEABA=</HashCode>
+      <FileName>ExcelTables\Excel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.Properties.Resources" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BUD_Storage.Windows.ComeOn" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACQAAAIAAACAAAAAABIAAABAAIBIAgAAAIAwgAAQ=</HashCode>
+      <FileName>Windows\ComeOn.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Windows.ListOfMoving" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAEAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQQ=</HashCode>
+      <FileName>Windows\ListOfMoving.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Windows.NewMoving" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAQAQAAAAAQAIBAAAAAAAAAAAAAAAAAEAQ=</HashCode>
+      <FileName>Windows\NewMoving.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Windows.Remnants" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAQAQAAAAAQAIBAAAAAAAAAAAAAAAAAEAQ=</HashCode>
+      <FileName>Windows\Remnants.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BUD_Storage.Windows.WelcomeWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\WelcomeWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

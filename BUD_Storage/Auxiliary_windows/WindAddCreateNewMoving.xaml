@@ -19,7 +19,7 @@
         <DataGrid x:Name="DataGridForProductsOnWarehouse" Grid.Row="2" CanUserAddRows="False" AutoGenerateColumns="False" Margin="20,20,20,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding IDProductInWarehouse}" CanUserResize="False" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Назва продукту" Binding="{Binding NameProduct}" CanUserResize="False" Width="460" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Назва товару" Binding="{Binding NameProduct}" CanUserResize="False" Width="460" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Кількість на складі" Binding="{Binding Quantity}" CanUserResize="False" Width="160" IsReadOnly="True"/>
                 <DataGridCheckBoxColumn Header="Перемістити"  CanUserResize="False" Width="90"/>
             </DataGrid.Columns>

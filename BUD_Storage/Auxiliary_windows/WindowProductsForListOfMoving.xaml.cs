@@ -1,6 +1,8 @@
 ﻿using BUD_Storage.App_Data;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,9 +62,34 @@ namespace BUD_Storage.Auxiliary_windows
             DataGridForProducts.ItemsSource = queryProducts.ToList();
         }
 
-        private void BtnPrintAct_Click(object sender, RoutedEventArgs e)
+        private void BtnSaveAct_Click(object sender, RoutedEventArgs e)
         {
+            SaveFileDialog save_file = new SaveFileDialog();
+            save_file.Filter = "Text file|*.txt";
+            save_file.FileName = "Переміщення №" + code_moving;
 
+            /*string[] act = new string[] 
+            {   "									АКТ",
+                "						передачі-приймання матеріальних цінностей",
+                "							на відповідальне зберігання",
+                "			«___»_________201" + DateTime.Now.Year + "р.							м.Рівне"
+            };*/
+
+            if (save_file.ShowDialog() == true)
+            {
+                using (Stream s = File.Open(save_file.FileName, FileMode.CreateNew))
+                {
+                    using (StreamWriter sw = new StreamWriter(s))
+                    {
+                        sw.Write("Hello");
+
+                        /*foreach(var ac in act)
+                        {
+                            sw.WriteLine(ac);
+                        }*/
+                    }
+                }
+            }
         }
     }
 }

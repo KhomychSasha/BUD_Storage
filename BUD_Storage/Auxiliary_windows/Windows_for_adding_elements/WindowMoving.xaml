@@ -36,7 +36,7 @@
             <TextBlock Grid.Column="0" Text="Кількість:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Foreground="#FFC3C5C9"/>
             <ComboBox x:Name="QuantityProduct" Grid.Column="1" IsEnabled="False" Background="#FF99B3D3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="35" FontSize="22"/>
         </Grid>
-        <Button x:Name="BtnMove" Grid.Row="4" Width="250" Height="35" FontSize="17" Content="Відправити" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnMove_Click"/>
+        <Button x:Name="BtnMove" Grid.Row="4" Width="250" Height="35" FontSize="17" Content="Перемістити" HorizontalAlignment="Center" Background="#FF99B3D3" IsDefault="True" Click="BtnMove_Click"/>
     </Grid>
 </Window>
 
