@@ -87,7 +87,8 @@ namespace BUD_Storage.Auxiliary_windows.Windows_for_adding_elements
                 else
                 {
                     new_quantity = Int32.Parse(QuantityProduct.Text);
-                    db.Entities_Product_In_The_Warehouses.ToArray()[prod_in_wr.Id - 1].Quantity -= new_quantity;
+                    db.Entities_Product_In_The_Warehouses.Where(pr => pr.Id == prod_in_wr.Id).SingleOrDefault().Quantity -= new_quantity;
+
                     db.SaveChanges();
                 }
 

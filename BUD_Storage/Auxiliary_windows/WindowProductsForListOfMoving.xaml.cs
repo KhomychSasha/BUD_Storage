@@ -1,8 +1,9 @@
 ﻿using BUD_Storage.App_Data;
-using Microsoft.Win32;
+//using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Word = Microsoft.Office.Interop.Word;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,11 +63,24 @@ namespace BUD_Storage.Auxiliary_windows
             DataGridForProducts.ItemsSource = queryProducts.ToList();
         }
 
-        private void BtnSaveAct_Click(object sender, RoutedEventArgs e)
-        {
-            SaveFileDialog save_file = new SaveFileDialog();
+        //private void BtnSaveAct_Click(object sender, RoutedEventArgs e)
+        //{
+            /*var app = new Word.Application();
+
+            try
+            {
+                Word.Document doc = app.Documents.Add(Visible: true);
+
+                doc.SaveAs2();
+                doc.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }*/
+            /*SaveFileDialog save_file = new SaveFileDialog();
             save_file.Filter = "Text file|*.txt";
-            save_file.FileName = "Переміщення №" + code_moving;
+            save_file.FileName = "Переміщення №" + code_moving;*/
 
             /*string[] act = new string[] 
             {   "									АКТ",
@@ -75,7 +89,7 @@ namespace BUD_Storage.Auxiliary_windows
                 "			«___»_________201" + DateTime.Now.Year + "р.							м.Рівне"
             };*/
 
-            if (save_file.ShowDialog() == true)
+            /*if (save_file.ShowDialog() == true)
             {
                 using (Stream s = File.Open(save_file.FileName, FileMode.CreateNew))
                 {
@@ -86,10 +100,10 @@ namespace BUD_Storage.Auxiliary_windows
                         /*foreach(var ac in act)
                         {
                             sw.WriteLine(ac);
-                        }*/
+                        }
                     }
                 }
-            }
-        }
+            }*/
+        //}
     }
 }
