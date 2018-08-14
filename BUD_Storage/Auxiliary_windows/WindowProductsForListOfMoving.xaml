@@ -43,7 +43,7 @@
                     <DataGridTextColumn Header="Ціна за одиницю" Binding="{Binding Price}" CanUserResize="False" Width="150"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <!--<Button x:Name="BtnSaveAct" Grid.Row="2" Width="140" Height="30" FontSize="16" Content="Зберегти звіт" HorizontalAlignment="Right" Background="#FF99B3D3" VerticalAlignment="Top" Margin="0,0,20,0" Click="BtnSaveAct_Click"/>-->
+            <Button x:Name="BtnSaveAct" Grid.Row="2" Width="140" Height="30" FontSize="16" Content="Зберегти звіт" HorizontalAlignment="Right" Background="#FF99B3D3" VerticalAlignment="Top" Margin="0,0,20,0" Click="BtnSaveAct_Click"/>
         </Grid>
     </Grid>
 </Window>

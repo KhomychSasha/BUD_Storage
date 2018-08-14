@@ -13,6 +13,7 @@
             <RowDefinition Height="35"/>
             <RowDefinition/>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="Склад" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gill Sans MT Condensed" FontWeight="Bold" Foreground="#FFC3C5C9"/>
         <TextBlock x:Name="TextBlockNameWarehouse" Grid.Row="1" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFC3C5C9"/>
@@ -33,5 +34,6 @@
             <TextBlock Grid.Column="0" Text="Загальна сума:" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Gill Sans MT Condensed" Foreground="#FFC3C5C9" Margin="0,0,10,0"/>
             <TextBlock x:Name="Sum" Grid.Column="1" FontSize="22" Width="190" Height="30" TextAlignment="Center" Background="#FFC3C5C9" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"/>
         </Grid>
+        <Button x:Name="BtnSaveReport" Grid.Row="4" Width="140" Height="30" FontSize="16" Content="Зберегти звіт" HorizontalAlignment="Right" Background="#FF99B3D3" VerticalAlignment="Top" Margin="0,0,20,0" Click="BtnSaveReport_Click" IsEnabled="False"/>
     </Grid>
 </Window>

@@ -1,7 +1,10 @@
 ﻿using BUD_Storage.App_Data;
 using BUD_Storage.Auxiliary_windows;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -118,6 +121,13 @@ namespace BUD_Storage.Windows
 
                     db.Entities_Invoices.Add(newInvoice);
 
+                    var contr = db.Entities_Contractors.Where(c => c.Id == newPrdInWarehouse.IdContractor).SingleOrDefault();
+                    var prd = db.Entities_Products.Where(p => p.Id == newPrdInWarehouse.IdProduct).SingleOrDefault();
+
+                    //create dbf file
+                    CreateDBFFile(newInvoice.NumberInvoice, newInvoice.DateInvoice, contr.Short_Name, contr.Full_Name, contr.EDRPOU, newPrdInWarehouse.IdWarehouse, prd.Code, newPrdInWarehouse.Price, newPrdInWarehouse.VAT, newPrdInWarehouse.Price_VAT);
+                    
+
                     if (NumberWarehouse.Text != idMainWarehouse.ToString())
                     {
                         int codeNewMoving = 0;
@@ -151,6 +161,49 @@ namespace BUD_Storage.Windows
             {
                 MessageForForms msg = new MessageForForms("Помилка!", "Не всі поля заповнені!");
                 msg.ShowDialog();
+            }
+        }
+
+        private void CreateDBFFile(string NumInvoice, DateTime DateInvoice, string ShortName, string FullName, string EDRPOU, int WarehouseId, int ProductCode, decimal Price, int VAT, decimal Price_VAT)
+        {
+            string file_n = "№" + NumInvoice;
+
+            SaveFileDialog save_file = new SaveFileDialog();
+            save_file.Filter = "Database file|*.dbf";
+            save_file.FileName = file_n;
+
+            if (save_file.ShowDialog() == true)
+            {
+                string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.IO.Path.GetDirectoryName(save_file.FileName) + "; Extended Properties=dBase IV";
+
+                try
+                {
+                    using (OleDbConnection connection = new OleDbConnection(connectionString))
+                    {
+                        using (OleDbCommand command = connection.CreateCommand())
+                        {
+                            connection.Open();
+
+                            string create = "create table " + file_n + " (NumberInvoice varchar(50), DateInvoice  varchar(30), ShortName varchar(50), FullName varchar(130), EDRPOU varchar(30), WarehouseId int, ProductCode int, Price varchar(50), VAT int, Price_VAT varchar(50)); ";
+
+                            command.CommandText = create;
+                            command.ExecuteNonQuery();
+
+                            string s_name = ShortName.Replace("\'","\"");
+                            string f_name = FullName.Replace("\'", "\"");
+
+                            string insert = "insert into " + file_n + " (NumberInvoice, DateInvoice, ShortName, FullName, EDRPOU, WarehouseId, ProductCode, Price, VAT, Price_VAT) VALUES (" + NumInvoice + ", '" + DateInvoice.ToShortDateString() + "', '" + s_name + "', '" + f_name + "', '" + EDRPOU + "', " + WarehouseId + ", " + ProductCode + ", '" + Price + "', " + VAT + ", '" + Price_VAT + "'); ";
+                            command.CommandText = insert;
+
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show(x.Message);
+                }
             }
         }
 
